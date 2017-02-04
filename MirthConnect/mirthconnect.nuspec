@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>mirthconnect</id>
+    <version>3.4.2</version>
+    <packageSourceUrl>https://github.com/recz5/chocolately_pckgs</packageSourceUrl>
+    <owners>Reczan Vizconde</owners>
+    <!-- ============================== -->
+
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Mirth Connect</title>
+    <authors>Reczan Vizconde</authors>
+    <projectUrl>http://www.mirthcorp.com/community/issues/browse/MIRTH/?selectedTab=com.atlassian.jira.jira-projects-plugin:summary-panel</projectUrl>
+    <iconUrl>https://www.mirth.com/Content/images/mirth/logo-social.jpg</iconUrl>
+    <licenseUrl>https://svn.mirthcorp.com/connect/tags/3.4.2/server/docs/LICENSE.txt</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://svn.mirthcorp.com/connect/</projectSourceUrl>
+    <bugTrackerUrl>http://www.mirthcorp.com/community/issues/browse/MIRTH/?selectedTab=com.atlassian.jira.jira-projects-plugin:issues-panel</bugTrackerUrl>
+    <tags>Mirth Connect HL7 CCD FHIR</tags>
+	<copyright>Mirth Corporation</copyright>
+    <summary>Mirth is an open source cross-platform HL7 interface engine that enables bi-directional sending of HL7 messages between systems and applications over multiple transports.</summary>
+    <description>Achieve seamless healthcare message integration. Enjoy the advantages, flexibility and innovation that comes with a large user base. It’s all free when you download Mirth Connect open source.</description>
+    <releaseNotes>http://www.mirthcorp.com/community/wiki/display/mirth/Mirth+Connect+3.4.2+-+Release+Notes</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
