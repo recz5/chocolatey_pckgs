@@ -1,11 +1,11 @@
-﻿choco install jre8 -y
+﻿choco install jre8 -y -f
 
-$ErrorActionPreference = 'Stop'; # stop on all errors
+$ErrorActionPreference = 'Stop';
 
-$packageName= 'MirthConnect' # arbitrary name for the package, used in messages
+$packageName= 'MirthConnect'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'http://downloads.mirthcorp.com/connect/3.4.2.8129.b167/mirthconnect-3.4.2.8129.b167-windows.exe' # download url, HTTPS preferred
-$url64      = 'http://downloads.mirthcorp.com/connect/3.4.2.8129.b167/mirthconnect-3.4.2.8129.b167-windows-x64.exe' # 64bit URL here (HTTPS preferred) or remove - if installer contains both (very rare), use $url
+$url        = 'http://downloads.mirthcorp.com/connect/3.4.2.8129.b167/mirthconnect-3.4.2.8129.b167-windows.exe'
+$url64      = 'http://downloads.mirthcorp.com/connect/3.4.2.8129.b167/mirthconnect-3.4.2.8129.b167-windows-x64.exe'
 
 $packageArgs = @{
   packageName   = $packageName
@@ -25,4 +25,4 @@ $packageArgs = @{
   silentArgs   = '-q'
 }
 
-Install-ChocolateyPackage @packageArgs # https://chocolatey.org/docs/helpers-install-chocolatey-package
+Install-ChocolateyPackage @packageArgs
