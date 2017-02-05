@@ -1,8 +1,10 @@
-﻿$ErrorActionPreference = 'Stop'; # stop on all errors
+﻿choco install jre8 -y
+
+$ErrorActionPreference = 'Stop'; # stop on all errors
 
 $packageName= 'MirthConnect' # arbitrary name for the package, used in messages
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'http://downloads.mirthcorp.com/connect/3.4.2.8129.b167/mirthconnect-3.4.2.8129.b167-windows.zip' # download url, HTTPS preferred
+$url        = 'http://downloads.mirthcorp.com/connect/3.4.2.8129.b167/mirthconnect-3.4.2.8129.b167-windows.exe' # download url, HTTPS preferred
 $url64      = 'http://downloads.mirthcorp.com/connect/3.4.2.8129.b167/mirthconnect-3.4.2.8129.b167-windows-x64.exe' # 64bit URL here (HTTPS preferred) or remove - if installer contains both (very rare), use $url
 
 $packageArgs = @{
@@ -24,11 +26,3 @@ $packageArgs = @{
 }
 
 Install-ChocolateyPackage @packageArgs # https://chocolatey.org/docs/helpers-install-chocolatey-package
-
-# Ensure mcmanager is stopped
-$p = Get-Process -Name mcmanager -ErrorAction Ignore
-
-if ($p)
-{
-    $p.Kill()
-}
